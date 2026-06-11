@@ -514,3 +514,76 @@ footer p{
   box-shadow:
   0 0 30px rgba(0,217,255,.2);
 }
+
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+
+  background-size:50px 50px;
+
+  mask-image:
+  radial-gradient(
+    circle at center,
+    black,
+    transparent 85%
+  );
+
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:800px;
+  height:800px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(0,217,255,.15),
+    transparent 70%
+  );
+
+  top:-300px;
+  right:-250px;
+
+  animation:heroGlow 8s ease-in-out infinite;
+
+  pointer-events:none;
+}
+
+@keyframes heroGlow{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.2);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
