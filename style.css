@@ -398,6 +398,26 @@ section{
 overflow:hidden;
 }
 
+.stat::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:200px;
+  height:200px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(0,217,255,.15),
+    transparent
+  );
+
+  top:-120px;
+  right:-120px;
+}
+
 .stat h2{
   font-family:'Orbitron',sans-serif;
 
