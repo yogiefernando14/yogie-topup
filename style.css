@@ -461,3 +461,56 @@ footer p{
     grid-template-columns:1fr 1fr;
   }
 }
+
+/* GAME IMAGE */
+
+.game{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.game img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  position:absolute;
+  inset:0;
+
+  transition:.5s;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+  to top,
+  rgba(0,0,0,.85),
+  transparent
+  );
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:25px;
+
+  z-index:2;
+}
+
+.overlay h3{
+  font-size:1.3rem;
+}
+
+.game:hover img{
+  transform:scale(1.08);
+}
+
+.game:hover{
+  border-color:#00d9ff;
+
+  box-shadow:
+  0 0 30px rgba(0,217,255,.2);
+}
