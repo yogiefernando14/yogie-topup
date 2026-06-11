@@ -632,3 +632,60 @@ footer p{
   }
 
 }
+
+/* HERO BUTTON */
+
+.hero-btn{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-btn::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.3),
+    transparent
+  );
+
+  transition:.6s;
+}
+
+.hero-btn:hover::before{
+  left:100%;
+}
+
+/* FLOATING CARD HOVER */
+
+.floating-card{
+  transition:.3s;
+}
+
+.floating-card:hover{
+
+  transform:
+  translateY(-8px)
+  scale(1.03);
+
+  border-color:var(--cyan);
+
+  box-shadow:
+  0 0 30px rgba(0,217,255,.25);
+}
+
+/* SECTION FADE */
+
+.section-header h2{
+  letter-spacing:2px;
+}
