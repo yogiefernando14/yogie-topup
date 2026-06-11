@@ -785,3 +785,30 @@ footer p{
     var(--cyan)
   );
 }
+
+.section-header{
+
+  position:relative;
+
+  padding-bottom:15px;
+}
+
+.section-header::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  width:120px;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--cyan),
+    transparent
+  );
+}
