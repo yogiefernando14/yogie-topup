@@ -100,6 +100,12 @@ body{
   padding:0 7%;
 }
 
+.hero-left,
+.hero-right{
+  position:relative;
+  z-index:2;
+}
+
 .hero-tag{
   color:var(--cyan);
   margin-bottom:15px;
